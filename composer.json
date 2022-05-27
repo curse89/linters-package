@@ -31,7 +31,7 @@
         "civicrm/composer-compile-plugin": "^0.18.0"
     },
     "scripts": {
-        "init-config": "Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
+        "init-config": "@php Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
     },
     "extra": {
         "compile": [
