@@ -1,0 +1,42 @@
+grumphp:
+    hooks_dir: ~
+    hooks_preset: local #local or vagrant
+    git_hook_variables:
+        EXEC_GRUMPHP_COMMAND: exec #команда, которая будет выполнять скрипт grumphp (строка или массив) - мб несколько
+        ENV: { }
+    stop_on_failure: false
+    ignore_unstaged_changes: false
+    hide_circumvention_tip: false
+    process_timeout: null
+    additional_info: ~
+    ascii:
+        failed: resource/fail.txt
+        succeeded: resource/success.txt
+    parallel:
+        enabled: true
+        max_workers: 32
+    fixer:
+        enabled: false
+        fix_by_default: false
+    environment:
+        files: [ ]
+        variables: { }
+        paths: [ ]
+
+    tasks:
+        phpcs:
+            standard: "vendor/curse89/linters-package/src/configurations/phpcs.xml.dist"
+            triggered_by: ['php']
+        phpcsfixer:
+            config: 'vendor/curse89/linters-package/src/configurations/.php-cs-fixer.dist.php'
+            config_contains_finder: true
+            diff: true
+            triggered_by: ['php']
+        phpmd:
+            ruleset: ['vendor/curse89/linters-package/src/configurations/phpmd.xml.dist']
+            report_format: ansi
+            triggered_by: ['php']
+        phpstan:
+            configuration: 'phpstan.neon'
+            triggered_by: ['php']
+            use_grumphp_paths: true
