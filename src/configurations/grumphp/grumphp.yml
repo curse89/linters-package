@@ -10,8 +10,8 @@ grumphp:
     process_timeout: null
     additional_info: ~
     ascii:
-        failed: resource/fail.txt
-        succeeded: resource/success.txt
+        failed: vendor/curse89/linters-package/configurations/grumphp/fail.txt
+        succeeded: vendor/curse89/linters-package/configurations/grumphp/success.txt
     parallel:
         enabled: true
         max_workers: 32
