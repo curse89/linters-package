@@ -37,8 +37,10 @@
             }
         ]
     },
-    "allow-plugins": {
-        "civicrm/composer-compile-plugin": true,
-        "symfony/flex": false
+    "config": {
+        "allow-plugins": {
+            "civicrm/composer-compile-plugin": true,
+            "symfony/flex": false
+        }
     }
 }
