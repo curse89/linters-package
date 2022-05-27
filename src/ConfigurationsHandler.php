@@ -6,14 +6,18 @@ class ConfigurationsHandler
 {
     public static function initConfigurations(): void
     {
-        self::copyFile(
-            'grumphp.yml',
-            \dirname(__DIR__) . '/src/configurations/grumphp/grumphp.yml'
-        );
-        self::copyFile(
-            'phpstan.neon',
-            \dirname(__DIR__) . '/src/configurations/phpstan/phpstan.neon'
-        );
+        $projectDir = \mb_stristr(__DIR__, '/vendor', true);
+
+        if ($projectDir) {
+            self::copyFile(
+                $projectDir . '/grumphp.yml',
+                __DIR__ . '/configurations/grumphp/grumphp.yml'
+            );
+            self::copyFile(
+                $projectDir . '/phpstan.neon',
+                __DIR__ . '/configurations/phpstan/phpstan.neon'
+            );
+        }
     }
 
     protected static function copyFile(string $target, string $packageFile): void

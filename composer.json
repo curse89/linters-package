@@ -30,13 +30,10 @@
         "symfony/framework-bundle": "^5.0",
         "civicrm/composer-compile-plugin": "^0.18.0"
     },
-    "scripts": {
-        "init-config": "@php-method Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
-    },
     "extra": {
         "compile": [
             {
-                "run": "@composer run-script init-config"
+                "run": "@php-method Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
             }
         ]
     },
