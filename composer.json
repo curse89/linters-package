@@ -27,14 +27,21 @@
         "phpstan/phpstan-symfony": "^1.2.0",
         "phpro/grumphp": "^1.12",
         "symfony/dotenv": "^5.0",
-        "symfony/framework-bundle": "^5.0"
+        "symfony/framework-bundle": "^5.0",
+        "civicrm/composer-compile-plugin": "^0.18.0"
     },
     "scripts": {
-        "post-install-cmd": [
-            "Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
-        ],
-        "post-update-cmd": [
-            "Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
+        "init-config": "Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
+    },
+    "extra": {
+        "compile": [
+            {
+                "run": "@composer run script init-config"
+            }
         ]
+    },
+    "allow-plugins": {
+        "civicrm/composer-compile-plugin": true,
+        "symfony/flex": false
     }
 }
