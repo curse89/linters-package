@@ -8,11 +8,11 @@ class ConfigurationsHandler
     {
         self::copyFile(
             'grumphp.yml',
-            \dirname(__DIR__) . '/configurations/grumphp/grumphp.yml'
+            \dirname(__DIR__) . '/src/configurations/grumphp/grumphp.yml'
         );
         self::copyFile(
             'phpstan.neon',
-            \dirname(__DIR__) . '/configurations/phpstan/phpstan.neon'
+            \dirname(__DIR__) . '/src/configurations/phpstan/phpstan.neon'
         );
     }
 
