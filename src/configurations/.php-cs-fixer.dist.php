@@ -1,7 +1,7 @@
 <?php
 
 $finder = (new PhpCsFixer\Finder())
-    ->in('.')
+    ->in(__DIR__)
     ->exclude(['var', 'vendor'])
 ;
 

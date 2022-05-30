@@ -36,11 +36,5 @@
                 "run": "@php-method Curse89\\LintersPackage\\ConfigurationsHandler::initConfigurations"
             }
         ]
-    },
-    "config": {
-        "allow-plugins": {
-            "civicrm/composer-compile-plugin": true,
-            "symfony/flex": false
-        }
     }
 }
