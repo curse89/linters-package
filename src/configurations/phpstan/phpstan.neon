@@ -13,8 +13,8 @@ parameters:
 #		- '#Negated boolean expression is always (false|true)\.#'
 	symfony:
 	    container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
-	    console_application_loader: vendor/curse89/linters-package/src/configurations/phpstan/console-application.php
+	    console_application_loader: tests/console-application.php
 	doctrine:
-		objectManagerLoader: vendor/curse89/linters-package/src/configurations/phpstan/object-manager.php
+		objectManagerLoader: tests/object-manager.php
 	bootstrapFiles:
 		- vendor/autoload.php
