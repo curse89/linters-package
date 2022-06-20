@@ -26,6 +26,10 @@ class ConfigurationsHandler
                 __DIR__ . '/configurations/grumphp/grumphp.yml'
             );
             self::copyFile(
+                $projectDir . '/rector.php',
+                __DIR__ . '/configurations/rector.php'
+            );
+            self::copyFile(
                 $projectDir . '/phpstan.neon',
                 __DIR__ . '/configurations/phpstan/phpstan.neon'
             );
