@@ -50,6 +50,8 @@ class ConfigurationsHandler
 
     protected static function copyFile(string $target, string $packageFile): void
     {
-        \copy($packageFile, $target);
+        if (!file_exists($target)) {
+            \copy($packageFile, $target);
+        }
     }
 }
