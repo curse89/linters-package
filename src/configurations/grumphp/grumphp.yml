@@ -2,7 +2,7 @@ grumphp:
     hooks_dir: ~
     hooks_preset: local #local or vagrant
     git_hook_variables:
-        EXEC_GRUMPHP_COMMAND: docker-compose run --rm --no-deps app php #команда, которая будет выполнять скрипт grumphp (строка или массив) - мб несколько
+        EXEC_GRUMPHP_COMMAND: docker-compose run -T --rm --no-deps app php #команда, которая будет выполнять скрипт grumphp (строка или массив) - мб несколько
         ENV: { }
     stop_on_failure: false
     ignore_unstaged_changes: false
@@ -40,3 +40,9 @@ grumphp:
             configuration: 'phpstan.neon'
             triggered_by: ['php']
             use_grumphp_paths: true
+        rector:
+            config: 'rector.php'
+            triggered_by: [ 'php' ]
+            ignore_patterns: [ ]
+            clear_cache: true
+            no_diffs: false
