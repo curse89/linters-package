@@ -10,8 +10,8 @@ parameters:
 	    container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
 	    console_application_loader: tests/console-application.php
 	paths:
-        - src
-        - tests
+	    - src
+	    - tests
 	doctrine:
 		objectManagerLoader: tests/object-manager.php
 	bootstrapFiles:
