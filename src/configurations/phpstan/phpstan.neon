@@ -5,15 +5,13 @@ includes:
 	- vendor/phpstan/phpstan-doctrine/rules.neon
 
 parameters:
-	level: 7
-	checkMissingIterableValueType: false
-	checkGenericClassInNonGenericObjectType: false
-#	ignoreErrors:
-#		- '#PHPDoc tag \@throws with type [a-zA-Z0-9\\_]+ is not subtype of Throwable#'
-#		- '#Negated boolean expression is always (false|true)\.#'
+	level: 6
 	symfony:
 	    container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
 	    console_application_loader: tests/console-application.php
+	paths:
+        - src
+        - tests
 	doctrine:
 		objectManagerLoader: tests/object-manager.php
 	bootstrapFiles:
