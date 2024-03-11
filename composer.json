@@ -28,7 +28,7 @@
         "phpro/grumphp": "^2.5",
         "symfony/dotenv": "^6.0",
         "symfony/framework-bundle": "^6.0",
-        "civicrm/composer-compile-plugin": "^0.20.0",
+        "civicrm/composer-compile-plugin": "^0.18.0 || ^0.20.0",
         "rector/rector": "^1.0.1",
         "ext-mbstring": "*"
     },
