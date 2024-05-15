@@ -45,11 +45,14 @@ return (new PhpCsFixer\Config())
         'phpdoc_summary' => false,
 
         // phpunit
-        'php_unit_test_case_static_method_calls' => ['call_type' => 'this'],
+        // 'php_unit_test_case_static_method_calls' => ['call_type' => 'this'],
 
         // semicolon
         // move the semicolon to the new line for chained calls
         'multiline_whitespace_before_semicolons' => ['strategy' => 'new_line_for_chained_calls'],
+
+        // spaces around class names in catch block
+        'types_spaces' => ['space_multiple_catch' => 'single'],
     ])
     ->setRiskyAllowed(true)
     ->setFinder($finder)
